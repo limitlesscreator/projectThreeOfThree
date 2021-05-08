@@ -11,7 +11,7 @@ export const getAllCategories = async () => {
     return await response.json();
 }
 
-export const getFilteredCategory = async () => {
-    const response = await fetch(API_URL + 'filter.php?c=Seafood')
+export const getFilteredCategory = async (name) => {
+    const response = await fetch(API_URL + `filter.php?c=${name}`)
     return await response.json()
 }
